@@ -3,7 +3,7 @@
 FROM php:8.4-apache
 
 # 将本地代码复制到容器内
-COPY index.html /var/www/html/
+COPY index.html 
 
 # Apache 配置文件内使用 80 端口
 RUN sed -i 's/80/80/g' /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf
@@ -13,3 +13,4 @@ RUN sed -i 's/80/80/g' /etc/apache2/sites-available/000-default.conf /etc/apache
 # RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 # 参考：https://hub.docker.com/_/php#configuration
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
+
