@@ -1,8 +1,14 @@
-# Container image that runs your code
-FROM alpine:3.10
+# 使用官方的 Python 基础镜像
+FROM python:3.8-slim
 
-# Copies your code file from your action repository to the filesystem path `/` of the container
-COPY entrypoint.sh /entrypoint.sh
+# 设置工作目录
+WORKDIR /app
 
-# Code file to execute when the docker container starts up (`entrypoint.sh`)
-ENTRYPOINT ["/entrypoint.sh"]
+# 将当前目录下的所有文件复制到工作目录
+COPY . /app
+
+# 安装依赖
+RUN pip install --trusted-host pypi.python.org -r requirements.txt
+
+# 运行应用
+CMD ["python", "app.py"]
