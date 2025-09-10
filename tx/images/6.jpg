@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Error>
-  <Code>NoSuchKey</Code>
-  <Message>The specified key does not exist.</Message>
-  <RequestId>5F0AC16F6C237B30302BB792</RequestId>
-  <HostId>manwang7.oss-cn-hangzhou.aliyuncs.com</HostId>
-  <Key>dh/images/6.jpg</Key>
-</Error>
