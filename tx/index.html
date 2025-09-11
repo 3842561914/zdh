@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://dsfh2.8866.org/dh/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="pragma">
+    <meta content="0" http-equiv="expires">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- Mobile Devices Support @end -->
+   <title>永不迷路H5 总导航</title>
+    <link href="./app/listnew.css" rel="stylesheet" media="all">
+    <link href="./app/index.css" rel="stylesheet" media="all">
+    <link href="./app/dialog1.css" rel="stylesheet" media="all">
+    <script src="./app/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        document.write('<script type="text/javascript" src="/dh/src/config.js?v=' + new Date().getTime() + '"> <\/script>');
+        $(function () {
+            $('img[rrurl]').click(function () {
+                location.href = $(this).attr('rrurl');
+            });
+            $('table').attr("cellpadding", "0").attr("cellspacing", "0");
+            $('[fixed="fixed"]').css('position', 'fixed');
+            resize();
+            $(window).resize(function () {
+                resize();
+            });
+            $('.add_qq_more').each(function () {
+                var tourl = $.trim($(this).attr('toto'));
+                if (tourl == '') {
+                    tourl = 'javascript:;'
+                }
+                if (tourl.indexOf(':') == -1) {
+                    tourl = tourl;
+                }
+                if (tourl != '') {
+                    if (tourl.indexOf('tel') !== 0) {
+                        if (tourl.indexOf('?') > 0) {
+                            tourl = tourl + '';
+                        } else {
+                            tourl = tourl + '';
+                        }
+                    }
+                    if ($(this).is('a')) {
+                        $(this).attr('href', tourl);
+                    } else if ($(this).find('a').size() > 0) {
+                        $(this).find('a').each(function () {
+                            if ($.trim($(this).attr('href')).indexOf('http') == -1) {
+                                $(this).attr('href', tourl);
+                            }
+                        });
+                    } else {
+                        $(this).wrap('<a href="' + tourl + '"></a>');
+                    }
+                }
+            });
+            if ($('.mainpicarea').is('div')) {
+                var tplth = $('.mainpicarea').find('td').length;
+                $('#ppoool').append('<li class="on" style="margin-left:5px;"></li>');
+                for (var i = 1; i
+                < tplth; i++) {
+                    $('#ppoool').append('<li style="margin-left:5px;"></li>');
+                }
+                $('.mainpicarea').on('dragok', function (e, msg) {
+                    if ((msg + '').indexOf('.') > 0) {
+                        msg = 0;
+                    }
+                    $('#ppoool').find('li').removeClass('on');
+                    $('#ppoool').find('li').eq(msg).addClass('on');
+
+                });
+            }
+        });
+
+        function resize() {
+            var ww = $(window).width();
+            $('.picshowtop,.mainpicshow').css('width', ww + 'px');
+            $('#tpdhtr').children('td').css('width', ww + 'px');
+            $('#tpdhtr').children('td').find('img').css('width', ww + 'px');
+            $('img').each(function () {
+                var pw = $(this).parent().width();
+                var ppw = $(this).parent().parent().width();
+                if ($(this).width() > ppw) {
+                    $(this).width(ppw);
+                }
+            });
+        }
+    </script>
+
+
+</head>
+<body style="overflow-x: hidden;">
+<div style="top:0;left:0;width: 100%;height: 100%;position: fixed;z-index:-999;background-image: url(./10.jpg);background-size:100%,100%;">
+</div>
+<div class="" stye="overflow: hidden;">
+    <div class="mainshowtop" style="z-index:100;">
+        <div id="mainmenu27" style="position:absolute;padding-top: 100px;">
+            <div style="text-align: center;background-image: url();">
+                <marquee style="color:#ffffff;font-size: 15px; width: 90%; line-height:20px;">
+                    官方导航链接：抵制不良游戏，杜绝外挂，拒绝盗版游戏。文明游戏，禁止赌博！
+                </marquee>
+                <ul>
+                    <li style="cursor: pointer;text-shadow: 0px 0px 2px #000;font-weight: 600;color: #fff;margin: 10px 5px 0px 0px;line-height: 43px;height: 43px;float: left;text-align: center;overflow: hidden;border-radius: 4px;background-image: url(images/bk.png);width: 100%;margin-right: 0px;"
+                        class="add_qq_more" toto="/">
+                        <a href="/">
+                            <button class="wz_27_buttom m_text" type="button" style="min-width:100%;">官方1:1导航点我
+                                仅供娱乐
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li style="cursor: pointer;text-shadow: 0px 0px 2px #000;font-weight: 600;color: #fff;margin: 10px 5px 0px 0px;line-height: 43px;height: 43px;float: left;text-align: center;overflow: hidden;border-radius: 4px;background-image: url(images/bk.png);width: 100%;margin-right: 0px;"
+                        class="add_qq_more" toto="">
+                        <a href="javascript:;">
+                            <button class="wz_27_buttom m_text" type="button" style="min-width:100%;">切勿用于非法用途
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul id="hall">
+                <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+            </ul>
+
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    function post(url, data, callback) {
+        $.ajax({
+            type: "post",
+            url: url,
+            dataType: 'JSON',
+            data: data,
+            async: false,
+            success: callback,
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+            }
+        });
+    }
+
+    post(BaseUrl + "/index/index/getHalls", {}, (e) => {
+        console.log(e.data)
+        for (let key in e.data) {
+            let html = `
+                <li class="add_qq_more" toto="${e.data[key]}">
+                    <a href="/">
+                        <button class="wz_27_buttom m_text" type="button">${key}</button>
+                    </a>
+                </li>
+            `;
+            $('#hall').append(html);
+        }
+
+        $('#hall').append("<div>\n" +
+            "                    <div class=\"mainpicshow\" style=\"height: 50px; width: 375px;\">\n" +
+            "                        <div class=\"mainpicarea\" style=\"height: 50px;\">\n" +
+            "                            <table cellpadding=\"0\" cellspacing=\"0\"\n" +
+            "                                   style=\"border: medium; border-image: none; height: 50px;\">\n" +
+            "                            </table>\n" +
+            "                        </div>\n" +
+            "                    </div>\n" +
+            "                    <div style=\"position: absolute;width: 100%;height: 20px;bottom: 0px;\" id=\"ppooind\">\n" +
+            "                        <!--<ol id=\"ppoool\"></ol>-->\n" +
+            "                    </div>\n" +
+            "                </div>");
+
+    });
+</script>
+</html>
